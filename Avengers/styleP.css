@@ -1,0 +1,153 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* =====================================================
+   STYLE GLOBAL DU SITE
+===================================================== */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #0a0a1a; 
+    color: white; 
+}
+
+
+.container {
+    max-width: 1500px;       
+    margin: auto;            
+    padding: 50px;           
+
+    display: flex;           /* cartes côte à côte */
+    flex-wrap: wrap;         
+    justify-content: center; 
+    gap: 70px;               /*  ESPACE entre chaque carte */
+}
+
+/* =====================================================
+   SECTION HERO (EN-TÊTE)
+===================================================== */
+.hero {
+    text-align: center;
+    padding: 40px 250px; 
+    background: linear-gradient(to right, #1a237e, #b71c1c);
+    border-radius: 10px; /* coins arrondis */
+    margin-bottom: 60px; /* espace sous le hero */
+}
+
+/* Titre principal */
+.hero h1 {
+    font-size: 48px;
+    color: gold;
+    margin-bottom: 20px;
+}
+
+/* Texte sous le titre */
+.hero p {
+    font-size: 20px;
+    max-width: 800px;
+    margin: 0 auto 30px; /* centré + espace en bas */
+}
+
+/* Bouton CTA */
+.cta-button {
+    display: inline-block;
+    background: #c62828;
+    color: white;
+    padding: 15px 40px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.cta-button:hover {
+    background: #ff5252;
+    transform: translateY(-3px);
+}
+
+/* =====================================================
+   TITRES DE SECTIONS (Héros / Fantastiques / Méchants)
+===================================================== */
+.section-title {
+    width: 100%;              
+    margin: 70px 0 40px;      /*  ESPACE AU-DESSUS ET EN-DESSOUS */
+    text-align: center;
+    font-size: 2rem;
+    color: #fff;
+}
+
+/* =====================================================
+   CARTES PERSONNAGES
+===================================================== */
+.card {
+    width: 200px;
+    background: #ff5252;
+    border-radius: 12px;
+    text-align: center;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    transition: transform 0.3s;
+
+    margin-bottom: 10px; 
+}
+
+/* Effet au survol */
+.card:hover {
+    transform: scale(1.05);
+}
+
+/* Image dans la carte */
+.card img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover; 
+    border-radius: 12px 12px 0 0;
+}
+
+/* Nom du personnage */
+.card h3 {
+    padding: 10px;
+    color: black;
+}
+
+/* =====================================================
+   CARTES DES MÉCHANTS
+   Bordure rouge foncée pour les différencier
+===================================================== */
+.villain {
+    border: 2px solid darkred;
+}
+
+.villain h3 {
+    color: black;
+}
+
+
+#modal {
+    display: none;            /* caché par défaut */
+    position: fixed;
+    inset: 0;                 /* couvre tout l’écran */
+    background: rgba(0,0,0,0.6);
+
+    justify-content: center;
+    align-items: center;
+}
+
+/* Contenu du modal */
+#modal-content {
+    background: white;
+    width: 400px;
+    padding: 20px;
+    border-radius: 10px;
+    color: black;
+}
+
+/* Bouton de fermeture */
+#close {
+    float: right;
+    font-size: 25px;
+    cursor: pointer;
+}

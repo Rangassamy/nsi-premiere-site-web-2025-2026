@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marvel Cinematic Universe</title>
+    <!-- Icônes FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Notre fichier CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <!-- EN-TÊTE PRINCIPALE -->
+        <header class="hero">
+            <div class="hero-content">
+                <h1>Marvel Cinematic Universe</h1>
+                <p>Découvrez l'univers cinématographique le plus célèbre au monde. Héros, aventures et émotions garanties !</p>
+                <a href="#explorer" class="cta-button">
+                    Explorer l'univers <i class="fas fa-arrow-right"></i>
+                </a>
+            </div>
+        </header>
+
+        <!-- SECTION 1 : POURQUOI LE MCU EST UNIQUE -->
+        <section id="explorer" class="highlights">
+            <h2 class="section-title">Pourquoi le MCU est Unique</h2>
+            
+            <div class="highlights-grid">
+                <!-- Carte 1 -->
+                <div class="highlight-card" onclick="window.location.href='personnages.html'">
+                    <div class="card-icon"><i class="fas fa-infinity"></i></div>
+                    <h3>Univers Connecté</h3>
+                    <p>Tous les films et séries sont liés dans la même histoire. Une première au cinéma !</p>
+                </div>
+                
+                <!-- Carte 2 -->
+                <div class="highlight-card" onclick="window.location.href='chronologie.html'">
+                    <div class="card-icon"><i class="fas fa-users"></i></div>
+                    <h3>Héros Légendaires</h3>
+                    <p>Iron Man, Captain America, Spider-Man... Des personnages devenus des icônes.</p>
+                </div>
+                
+                <!-- Carte 3 -->
+                <div class="highlight-card" onclick="window.location.href='quiz-marvel.html'">
+                    <div class="card-icon"><i class="fas fa-gamepad"></i></div>
+                    <h3>Quiz Marvel</h3>
+                    <p>Testez vos connaissances sur le MCU avec notre quiz interactif !</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 2 : RÉUSSITES DU MCU -->
+        <section id="success" class="success-section">
+            <h2 class="section-title">Les Réussites du MCU</h2>
+            <p class="section-subtitle">Un phénomène qui a marqué l'histoire du cinéma</p>
+            
+            <div class="achievements-container">
+                <!-- Carte Box-Office -->
+                <div class="achievement-card">
+                    <h3>Record de Box-Office</h3>
+                    <div class="achievement-stats">
+                        <span class="stat">$29.5+ milliards</span>
+                        <span class="stat-label">Recettes mondiales</span>
+                    </div>
+                    <p>La franchise la plus rentable de tous les temps.</p>
+                    <ul class="achievement-list">
+                        <li><i class="fas fa-check"></i> 4 films à +$2 milliards</li>
+                        <li><i class="fas fa-check"></i> 8 films à +$1 milliard</li>
+                        <li><i class="fas fa-check"></i> Endgame: $2.799 milliards</li>
+                    </ul>
+                </div>
+                
+                <!-- Carte Impact Culturel -->
+                <div class="achievement-card">
+                    <h3>Impact Culturel</h3>
+                    <div class="achievement-stats">
+                        <span class="stat">1.3+ milliard</span>
+                        <span class="stat-label">Entrées au cinéma</span>
+                    </div>
+                    <p>Une influence mondiale qui dépasse le cinéma.</p>
+                    <ul class="achievement-list">
+                        <li><i class="fas fa-check"></i> "I am Iron Man"</li>
+                        <li><i class="fas fa-check"></i> Le "Snap" de Thanos</li>
+                        <li><i class="fas fa-check"></i> Costumes et cosplay</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- TIMELINE -->
+            <div class="timeline">
+                <h3 class="timeline-title">Dates Clés</h3>
+                <div class="timeline-container">
+                    <!-- Élément 1 -->
+                    <div class="timeline-item">
+                        <div class="timeline-date">2008</div>
+                        <div class="timeline-content">
+                            <h4>Début avec Iron Man</h4>
+                            <p>Le film qui a tout lancé. La première scène post-crédits présente Nick Fury.</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Élément 2 -->
+                    <div class="timeline-item">
+                        <div class="timeline-date">2012</div>
+                        <div class="timeline-content">
+                            <h4>Premiers Avengers</h4>
+                            <p>Réunion historique d'Iron Man, Captain America, Thor et Hulk.</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Élément 3 -->
+                    <div class="timeline-item">
+                        <div class="timeline-date">2019</div>
+                        <div class="timeline-content">
+                            <h4>Avengers: Endgame</h4>
+                            <p>Conclusion épique de 11 ans d'histoire. Le film le plus attendu.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- PIED DE PAGE -->
+        <footer class="footer">
+            <p>L'aventure Marvel continue...</p>
+            <div class="footer-links">
+                <a href="#"><i class="fab fa-imdb"></i> IMDb</a>
+                <a href="#"><i class="fas fa-play-circle"></i> Disney+</a>
+                <a href="#"><i class="fas fa-book"></i> Wiki Marvel</a>
+            </div>
+            <p class="copyright">Site créé par un fan du MCU. Projet éducatif.</p>
+        </footer>
+    </div>
+    
+    <!-- Petit script pour les cartes cliquables -->
+    <script>
+        // Rendre les cartes plus interactives
+        document.querySelectorAll('.highlight-card').forEach(card => {
+            card.style.cursor = 'pointer';
+            
+            // Animation au survol
+            card.addEventListener('mouseenter', function() {
+                this.style.transition = 'all 0.3s ease';
+            });
+            
+            // Animation quand on quitte
+            card.addEventListener('mouseleave', function() {
+                this.style.transform = 'translateY(0)';
+            });
+        });
+        
+        // Message de bienvenue
+        console.log("Bienvenue sur le site Marvel !");
+    </script>
+</body>
+</html>

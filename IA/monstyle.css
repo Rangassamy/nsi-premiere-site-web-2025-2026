@@ -1,0 +1,282 @@
+/* ================= BASE ================= */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    height: 100vh; /* prend toute la hauteur de l'écran */
+    background: linear-gradient(to bottom, #0d1b2a, #1b263b) no-repeat;
+    background-size: 100% 100%; /* couvre tout le body */
+    color: #fff;
+    text-align: center;
+    overflow: hidden; /* pas de scroll horizontal */
+    position: relative;
+}
+
+/* IMAGE */
+.main-image {
+    display: block;
+    margin: 20px auto;
+    max-width: 700px;
+}
+
+/* ================= TEXTE 2026 ================= */
+.fireworks-container {
+    margin-top: 10px;
+}
+
+.year {
+    font-size: 100px;
+    font-weight: bold;
+    color:#FFD700;
+    text-shadow:
+        0 0 15px rgba(79,195,247,1),
+        0 0 30px rgba(79,195,247,0.8),
+        2px 2px 12px #000;
+    animation: pop 1.5s ease-out forwards, sparkle 2s infinite alternate;
+}
+
+@keyframes pop {
+    0% { transform: scale(0.5); opacity: 0; }
+    50% { transform: scale(1.2); opacity: 1; }
+    100% { transform: scale(1); }
+}
+
+@keyframes sparkle {
+    0% { text-shadow: 0 0 10px #000, 0 0 5px #4fc3f7; }
+    100% { text-shadow: 0 0 20px #000, 0 0 25px #4fc3f7; }
+}
+
+/* ================= ROBOT POSITION ================= */
+.robot-container {
+    position: absolute;
+    left: 18%;
+    top: calc(20px + 560px);
+    width: 180px;
+    z-index: 5;
+}
+
+.robot-text {
+    font-size: 22px;
+    font-weight: bold;
+    color: #ffcc00;
+    text-shadow: 2px 2px 5px #000;
+    margin-bottom: 10px;
+    animation: fadeInUp 2s forwards;
+}
+
+@keyframes fadeInUp {
+    0% { opacity: 0; transform: translateY(20px) scale(0.8); }
+    100% { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+/* ================= ROBOT STRUCTURE ================= */
+.robot {
+    width: 180px;
+    margin: auto;
+}
+
+/* TÊTE */
+.robot .head {
+    width: 80px;
+    height: 60px;
+    background: linear-gradient(145deg,#aaa,#555);
+    border-radius: 50% 50% 40% 40%;
+    margin: auto;
+    position: relative;
+    box-shadow: inset -3px -3px 8px rgba(0,0,0,0.4);
+}
+
+/* ANTENNE */
+.robot .antenna {
+    width: 4px;
+    height: 15px;
+    background: #222;
+    position: absolute;
+    top: -15px;
+    left: 38px;
+    border-radius: 2px;
+}
+
+/* YEUX */
+.robot .eye {
+    width: 14px;
+    height: 14px;
+    background: cyan;
+    border-radius: 50%;
+    position: absolute;
+    top: 18px;
+    box-shadow: 0 0 8px cyan;
+    animation: blink 2s infinite;
+}
+
+.robot .eye.left { left: 18px; }
+.robot .eye.right { right: 18px; }
+
+/* BOUCHE */
+.robot .mouth {
+    width: 36px;
+    height: 6px;
+    background: #222;
+    border-radius: 3px;
+    position: absolute;
+    bottom: 10px;
+    left: 22px;
+}
+
+/* COU */
+.robot .neck {
+    width: 20px;
+    height: 12px;
+    background: #555;
+    margin: auto;
+    border-radius: 6px;
+}
+
+/* TORSE */
+.robot .torso {
+    width: 100px;
+    height: 120px;
+    background: linear-gradient(145deg,#888,#444);
+    border-radius: 25px;
+    margin: auto;
+    position: relative;
+    box-shadow: inset -4px -4px 10px rgba(0,0,0,0.4);
+}
+
+/* PLAQUES */
+.robot .plate {
+    position: absolute;
+    width: 30px;
+    height: 10px;
+    background: #bbb;
+    left: 35px;
+    border-radius: 5px;
+}
+
+.robot .plate1 { top: 20px; }
+.robot .plate2 { top: 50px; }
+
+/* BRAS */
+.robot .arm {
+    position: absolute;
+    top: 15px;
+    width: 18px;
+    height: 70px;
+    background: linear-gradient(145deg,#777,#333);
+    border-radius: 12px;
+    transition: transform 0.3s;
+}
+
+.robot .arm.left {
+    left: -18px;
+    transform: rotate(10deg);
+}
+
+.robot .arm.right {
+    right: -18px;
+    transform: rotate(-10deg);
+}
+
+.robot .arm:hover {
+    transform: rotate(0deg);
+}
+
+/* JAMBES */
+.robot .legs {
+    display: flex;
+    justify-content: space-between;
+    width: 60px;
+    margin: -10px auto 0;
+}
+
+.robot .leg {
+    width: 20px;
+    height: 60px;
+    background: linear-gradient(145deg,#777,#333);
+    border-radius: 12px;
+}
+
+/* CLIGNEMENT YEUX */
+@keyframes blink {
+    0%, 90%, 100% { height: 14px; }
+    95% { height: 2px; }
+}
+
+/* ================= CASES ================= */
+#box {
+    position: absolute;
+    left: 85%;
+    top: calc(20px + 460px);
+    transform: translate(-50%, 0);
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    z-index: 5;
+}
+
+#boximage {
+    width: 700px;
+    height: 600px;
+    position: absolute;
+    border-radius: 8px;
+    top: 100px;
+    left: 600px;
+    z-index: 10;
+    background-image: url('image 3.jpg'); 
+    background-size: cover;               
+    background-position: center;     
+}
+
+img{
+	cursor:pointer;
+	width: 85px;
+    height: 85px;
+	position: absolute;
+    top: 5px;
+    left: 8px;
+	z-index:10;
+}
+
+#box2{
+z-index: 0;
+width: 100px;
+height: 100px;
+background-color: midnightblue;
+border-radius: 50%;
+position: absolute;
+top: 30px;
+left: 30px;
+}
+
+/* Animation commune */
+.box1 {
+    padding: 20px 34px;
+    font-size: 20px;
+    border-radius: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.box1:hover {
+    transform: scale(1.15) translateY(-5px);
+    box-shadow: 0 8px 18px rgba(255,255,255,0.4);
+}
+
+/* Designs différents */
+.box1:nth-child(1) {
+    background: linear-gradient(135deg, #4fc3f7, #0288d1);
+}
+
+.box1:nth-child(2) {
+    background: linear-gradient(135deg, #81c784, #388e3c);
+}
+
+.box1:nth-child(3) {
+    background: linear-gradient(135deg, #ba68c8, #6a1b9a);
+}
+
+.box1:nth-child(4) {
+    background: linear-gradient(135deg, #ffcc00, #ff9800);
+}
+

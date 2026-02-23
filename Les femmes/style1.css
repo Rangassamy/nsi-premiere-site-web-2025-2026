@@ -1,0 +1,84 @@
+h1{
+    background-color: rgba(25, 218, 199, 0);
+    color: rgb(255, 255, 0);
+}
+
+
+
+
+
+body {
+    color: #e53575;
+    font-family: 8bits, sans-serif;
+    text-align: center;
+    font-size: 30px;
+    margin-top: 50px;
+	background-image:url("Kirby.jpg");
+	background-attachment: fixed;
+	background-repeat: repeat;
+	background-size: cover;
+	
+}
+
+button {
+    background-color: rgba(250, 9, 141, 0.189);
+    color: rgb(241, 237, 238);
+    transform: scale(1);
+  transition: transform 0.3s ease;
+  transform-origin: center;
+    margin: 10px;
+    padding: 10px 20px;
+    font-size: 18px;
+}
+
+button:hover{
+transform: scale(1.1)
+
+}
+
+
+
+
+.bonne {
+    background-color: #4caf4f48 !important;
+    color: rgb(244, 244, 244);
+    animation: pop 0.4s ease;
+}
+
+.mauvaise {
+    background-color: #e5383574 !important;
+    color: white;
+    animation: shake 0.4s ease;
+}
+
+@keyframes pop {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.15); }
+    100% { transform: scale(1); }
+}
+
+@keyframes shake {
+    0% { transform: translateX(0); }
+    25% { transform: translateX(-5px); }
+    50% { transform: translateX(5px); }
+    75% { transform: translateX(-5px); }
+    100% { transform: translateX(0); }
+}
+
+#reponses {
+    display: flex;
+    flex-direction: column;   
+    gap: 10px;                
+    align-items: center;      }
+
+#jumpscare {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    z-index: 9999;
+}
+

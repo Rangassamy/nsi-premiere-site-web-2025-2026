@@ -1,0 +1,134 @@
+body{
+    
+  background-image: url("estrellita.jpg");
+ background-size: 1900px;
+ background-attachment: fixed;
+ background-repeat: repeat;
+ height: 100hv;
+margin: 0%;
+}
+
+.page{
+  max-width: 1200px;
+  margin: auto;
+  padding: 60px 30px;
+}
+
+.img{
+  display: flex;
+  justify-content: center;
+  margin-bottom: 80px;
+}
+
+.img img{
+  max-width: 300px;
+}
+
+.layout{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-areas:
+    "left right"
+    "bottom bottom";
+  gap: 50px;
+}
+
+
+h1{
+  font-family:'Alex Brush'cursive;
+  font-size: 64px;
+  font-weight: 500;
+  letter-spacing: 5px;
+  color: rgb(109, 116, 195);
+  text-align:center;
+  background-color: rgb(199, 224, 249) ;
+}
+
+ .box{
+  background: linear-gradient(135deg, #10e4c4ec, #7cf3e4);
+  padding: 30px;
+  border-radius: 20px;
+  color: #004d4d;
+  font-size: 16px;
+
+  box-shadow: 0 15px 35px rgba(0,0,0,0.2);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.box:hover{
+  transform: translateY(-12px) scale(1.03);
+  box-shadow: 0 25px 50px rgba(0,0,0,0.3);
+}
+
+
+
+.box-left{
+  grid-area: left;
+}
+
+.box-right{
+  grid-area: right;
+}
+
+.box-bottom{
+  grid-area: bottom;
+  text-align: center;
+  font-size: 18px;
+}
+
+@keyframes fadeUp{
+  from{
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to{
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.box{
+  animation: fadeUp 1s ease forwards;
+}
+
+
+@media (max-width: 768px){
+  .layout{
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "left"
+      "right"
+      "bottom";
+  }
+}
+
+
+
+
+
+#bg-video {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Remplit tout l'écran */
+   
+}
+
+
+
+.btn:hover{
+    background: #FFFF;
+    transform: scale(1.1); /* crece un poco */
+}
+
+
+.btn {
+    transition: transform 0.3s ease;
+  position: fixed;
+  bottom: 20px;   /* distance du bas */
+  right: 20px;    /* distance de la droite */
+  z-index: 1000;  /* pour être au-dessus du contenu */
+}
+

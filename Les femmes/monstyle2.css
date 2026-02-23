@@ -1,0 +1,63 @@
+body{
+  background-image: url("poison.jpg");
+ background-size: 1900px;
+ background-attachment: fixed;
+ background-repeat: repeat;
+}
+
+
+h1{ display: grid;
+    place-items: center;
+    height:10vh ;
+    font-size: 80px;
+    text-align:center;
+    background-color: rgba(25, 218, 199, 0.368);
+    font-family: 'Alex Brush' cursive;
+    font-size: 80px;
+    color: #ffffff;
+    opacity: 0; /* départ invisible */
+    transform: translateY(50px); /* départ en dessous */
+    animation: glideIn 2s forwards; /* durée 2s */
+    }
+   
+
+    @keyframes glideIn{
+      to {
+        opacity: 1;
+        transform: translateY(0); /* arrive à sa position normale */
+}
+    }
+
+
+ #box{ 
+  display:flex;
+  justify-content:space-around;
+ background-color: rgba(12, 42, 105, 0.281);
+ border: 5px solid #10e48189; /* borde o algo asi*/
+    border-radius: 10px;            /* Coins arrondis */
+  padding: 20px;                 /* Espace intérieur */
+            box-shadow:0 4px 8px   rgb(126, 252, 214); /* Ombre */
+              }                /* Largeur fixe */
+
+    
+
+  img {
+  display: block;
+  transform: scale(1);
+  transition: transform 0.3s ease;
+  transform-origin: center center;
+}
+
+img:hover {
+  transform: scale(1.1);
+}
+
+
+
+.gif{
+  display: block;
+  margin: 0 auto;
+  width: 170px;
+}
+
+

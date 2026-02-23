@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marvel Cinematic Universe</title>
+
+    <!-- Icônes -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <link rel="stylesheet" href="style_iron_bud.css">
+</head>
+<body>
+
+<div class="container">
+
+    <!-- HERO -->
+    <header class="hero">
+        <div class="hero-content">
+            <h1>Chronologie des films Marvel</h1>
+            <p>Jarvis aide moi à comprendre la chronologie des film Marvel</p>
+            <a href="mcuhub.html" class="cta-button">
+                Go back to the heian era <i class="fas fa-arrow-right"></i>
+            </a>
+        </div>
+    </header>
+
+    <!-- MCU -->
+    <h2 id="mcu">Chronologie des films MCU</h2>
+
+<div class="ligne-container">
+    <button class="fleche gauche" onclick="scrollLigne('mcu-ligne', -1)">
+        ‹
+    </button>
+
+    <div class="ligne-films" id="mcu-ligne"></div>
+
+    <button class="fleche droite" onclick="scrollLigne('mcu-ligne', 1)">
+        ›
+    </button>
+</div>
+
+<!-- X-men -->
+
+<h2>Chronologie des films X-men</h2>
+
+<div class="ligne-container">
+    <button class="fleche gauche" onclick="scrollLigne('xmen-ligne', -1)">
+        ‹
+    </button>
+
+    <div class="ligne-films" id="xmen-ligne"></div>
+
+    <button class="fleche droite" onclick="scrollLigne('xmen-ligne', 1)">
+        ›
+    </button>
+</div>
+
+
+<!--popup-->
+<div id="popup" class="popup">
+    <div class="popup-contenu">
+        <span class="fermer" onclick="fermerPopup()">×</span>
+        <div id="popup-texte"></div>
+    </div>
+</div>
+
+<script src="filmscript.js" defer></script>
+</body>
+</html>

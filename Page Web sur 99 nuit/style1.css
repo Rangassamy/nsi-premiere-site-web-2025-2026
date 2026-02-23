@@ -1,0 +1,83 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin-top: 50px;
+	background-image:url("vache.jpg");
+	background-attachment: fixed;
+	background-repeat: repeat;
+	background-size: cover;
+	
+}
+
+#box1{
+z-index: 0;
+width: 100px;
+height: 100px;
+background-color: khaki;
+border-radius: 50%;
+position: absolute;
+top: 30px;
+left: 30px;
+}
+
+img{
+	cursor:pointer;
+	width: 85px;
+    height: 85px;
+	position: absolute;
+    top: 5px;
+    left: 8px;
+}
+
+#boxbonus{
+z-index: 0;
+color: lightyellow;
+background-color: khaki;
+padding: 12px ;
+font-size:21px;
+border-radius:8px;
+cursor:pointer;
+position: absolute;
+top: 800px;
+right: 260px;
+border-left: 60px solid khaki;
+border-right: 60px solid khaki;
+}
+
+button {
+    margin: 10px;
+    padding: 10px 20px;
+    font-size: 18px;
+}
+.bonne {
+    background-color: #4CAF50 !important;
+    color: white;
+    animation: pop 0.4s ease;
+}
+
+.mauvaise {
+    background-color: #E53935 !important;
+    color: white;
+    animation: shake 0.4s ease;
+}
+
+@keyframes pop {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.15); }
+    100% { transform: scale(1); }
+}
+
+@keyframes shake {
+    0% { transform: translateX(0); }
+    25% { transform: translateX(-5px); }
+    50% { transform: translateX(5px); }
+    75% { transform: translateX(-5px); }
+    100% { transform: translateX(0); }
+}
+
+#reponses {
+    display: flex;
+    flex-direction: column;   /* aligne en colonne */
+    gap: 10px;                /* espace entre les boutons */
+    align-items: center;      /* centre les réponses */
+}

@@ -1,0 +1,105 @@
+body{
+    background-image: url("fond pâquerettes.gif");
+    background-size: 1900px 1000px;
+    background-attachment: fixed;
+    background-repeat: repeat;
+	background-size: cover;
+}
+
+h1{
+    font-size: 55px;
+    position: absolute;
+    top: 40px;
+    left: 500px;
+    color: white; 
+	font-family:calibri;
+	text-align: center;
+    z-index: 2;
+}
+
+h2{
+    font-size: 55px;
+    position: absolute;
+    top: 37px;
+    left: 500px;
+    color: lightgrey; 
+	font-family:calibri;
+	text-align: center;
+	z-index: 1;
+}
+
+div{
+    color: white;
+    text-align: center;
+	font-family:calibri;
+}
+
+img{
+	cursor:pointer;
+	width: 85px;
+    height: 85px;
+	position: absolute;
+    top: 5px;
+    left: 8px;
+	z-index:5;
+}
+
+#box1{
+z-index: 0;
+width: 100px;
+height: 100px;
+background-color: greenyellow;
+border-radius: 50%;
+position: absolute;
+top: 30px;
+left: 30px;
+}
+
+#boxbonus{
+z-index: 0;
+color: lightyellow;
+background-color: khaki;
+padding: 12px ;
+font-size:40px;
+border-radius:8px;
+cursor:pointer;
+position: absolute;
+top: 350px;
+left: 540px;
+border-left: 50px solid khaki;
+border-right: 50px solid khaki;
+}
+
+#boxmalus{
+z-index: 0;
+color: lightyellow;
+background-color: khaki;
+padding: 12px ;
+font-size:40px;
+border-radius:8px;
+cursor:pointer;
+position: absolute;
+top: 350px;
+right: 680px;
+border-left: 60px solid khaki;
+border-right: 60px solid khaki;
+}
+
+#cuteanimals{
+	width: 180px;
+    height: auto;
+	position: absolute;
+    top: 90px;
+    left: 1740px;
+	z-index: 3;
+	transform: scaleX(-1);
+}	
+
+#pioupiou{
+	width: 500px;
+    height: auto;
+	position: absolute;
+    top:470px;
+    right: 270px;
+	z-index: 4;
+}

@@ -1,0 +1,71 @@
+
+body{
+	background-image:url("fond d'accueil des sites web.gif");
+	background-size: 1950px 1000px;
+	background-attachment:fixed;
+	background-repeat:repeat;
+	background-size: cover;
+}
+
+h1{
+background-color:#2E3A17;
+padding: 30px ;
+	font-size:40px;
+	border-radius:5px;
+	position: absolute;
+    top: 10px;
+    left: 0px;
+    border-right: 250px solid #2E3A17;
+	font-family: trajan;
+	color:#D9D6B7;
+}
+
+h2{
+color:white;
+padding: 25px ;
+font-size: 35px;
+z-index: 1;
+text-align:center;
+ position: absolute;
+    top: 300px;
+    right: 290px;
+	font-family:calibri;
+}
+
+a{
+	color:white;
+text-align:right;
+ position: absolute;
+    top: 900px;
+    right: 30px;
+	font-family:calibri;
+}
+
+body{
+text-align:right;
+font-family:calibri;
+}
+
+div{
+	color:white;
+	text-align: center;
+	font-family:calibri;
+}
+
+#kirby{
+	width: 200px;
+    height: auto;
+	position: absolute;
+    top: 5px;
+    right: 50px;
+	z-index: 3;
+}	
+
+#cutecat{
+	width: 500px;
+    height: 300px;
+	position: absolute;
+    top: 570px;
+    right: 360px;
+	z-index: 4;
+}	

@@ -1,0 +1,419 @@
+/* ===================================
+   RESET BASIQUE
+   =================================== */
+
+/* Enlève les marges par défaut du navigateur */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Garde la même taille avec padding */
+}
+
+/* Police de base pour tout le site */
+body {
+    font-family: Arial, sans-serif; /* Police simple */
+    background-color: #0a0a1a; /* Fond noir bleuté */
+    color: white; /* Texte blanc */
+    line-height: 1.6; /* Espacement entre les lignes */
+}
+
+/* Centre tout le contenu et limite la largeur */
+.container {
+    max-width: 1200px; /* Largeur max de 1200px */
+    margin: 0 auto; /* Centre horizontalement */
+    padding: 20px; /* Espace autour */
+}
+
+/* ===================================
+   SECTION HÉRO (EN-TÊTE)
+   =================================== */
+
+/* Section d'accueil en haut de la page */
+.hero {
+    text-align: center; /* Texte centré */
+    padding: 60px 20px; /* Espace intérieur */
+    background: linear-gradient(to right, #1a237e, #b71c1c); /* Dégradé bleu à rouge */
+    border-radius: 20px; /* Coins arrondis */
+    margin-bottom: 40px; /* Espace en bas */
+}
+
+/* Titre principal */
+.hero h1 {
+    font-size: 48px; /* Taille très grande */
+    margin-bottom: 20px; /* Espace en bas */
+    color: gold; /* Couleur or */
+}
+
+/* Sous-titre */
+.hero p {
+    font-size: 20px; /* Taille moyenne */
+    color: #e0e0e0; /* Gris clair */
+    max-width: 800px; /* Limite la largeur */
+    margin: 0 auto 30px; /* Centre et espace en bas */
+}
+
+/* Bouton principal */
+.cta-button {
+    display: inline-block; /* Se comporte comme un bouton */
+    background: #c62828; /* Rouge */
+    color: white;
+    padding: 15px 40px; /* Espace intérieur */
+    border-radius: 50px; /* Bouton ovale */
+    text-decoration: none; /* Enlève le soulignement */
+    font-size: 18px;
+    font-weight: bold;
+    transition: all 0.3s; /* Animation fluide */
+}
+
+/* Effet au survol du bouton */
+.cta-button:hover {
+    background: #ff5252; /* Rouge plus clair */
+    transform: translateY(-3px); /* Lève légèrement */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3); /* Ombre */
+}
+
+/* ===================================
+   TITRES DE SECTIONS
+   =================================== */
+
+.section-title {
+    text-align: center; /* Centré */
+    font-size: 36px; /* Grand */
+    margin: 60px 0 40px; /* Espace autour */
+    color: white;
+    position: relative; /* Pour la ligne en dessous */
+}
+
+/* Ligne décorative sous le titre */
+.section-title::after {
+    content: ''; /* Contenu vide */
+    display: block; /* Prend toute la largeur */
+    width: 100px; /* Largeur de 100px */
+    height: 4px; /* Hauteur de 4px */
+    background: gold; /* Couleur or */
+    margin: 15px auto 0; /* Centre et espace en haut */
+    border-radius: 2px; /* Coins légèrement arrondis */
+}
+
+/* ===================================
+   CARTES "POURQUOI LE MCU EST UNIQUE"
+   =================================== */
+
+/* Grille de 3 cartes côte à côte */
+.highlights-grid {
+    display: grid; /* Utilise le système de grille */
+    grid-template-columns: repeat(3, 1fr); /* 3 colonnes égales */
+    gap: 30px; /* Espace entre les cartes */
+    margin-bottom: 80px;
+}
+
+/* Chaque carte individuelle */
+.highlight-card {
+    background: #1a1a2e; /* Fond bleu nuit */
+    border-radius: 15px; /* Coins arrondis */
+    padding: 30px; /* Espace intérieur */
+    text-align: center; /* Texte centré */
+    cursor: pointer; /* Curseur en forme de main */
+    transition: transform 0.3s; /* Animation */
+    border: 2px solid transparent; /* Bordure invisible par défaut */
+}
+
+/* Effet au survol de la carte */
+.highlight-card:hover {
+    transform: translateY(-10px); /* Lève la carte */
+    border-color: gold; /* Bordure dorée */
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4); /* Ombre portée */
+}
+
+/* Icône dans la carte */
+.card-icon {
+    font-size: 50px; /* Grande taille */
+    color: gold; /* Or */
+    margin-bottom: 20px; /* Espace en bas */
+}
+
+/* Titre de la carte */
+.highlight-card h3 {
+    font-size: 24px;
+    margin-bottom: 15px;
+    color: white;
+}
+
+/* Texte de la carte */
+.highlight-card p {
+    color: #b0b0b0; /* Gris */
+    font-size: 16px;
+}
+
+/* ===================================
+   SECTION RÉUSSITES DU MCU
+   =================================== */
+
+.section-subtitle {
+    text-align: center;
+    color: #b0b0b0;
+    font-size: 18px;
+    margin-bottom: 50px;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Grille des réussites (2 colonnes) */
+.achievements-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2 colonnes */
+    gap: 30px;
+    margin-bottom: 60px;
+}
+
+/* Carte de réussite */
+.achievement-card {
+    background: #162447; /* Bleu foncé */
+    border-radius: 15px;
+    padding: 30px;
+    border-left: 5px solid gold; /* Bordure gauche dorée */
+}
+
+/* Titre de la carte */
+.achievement-card h3 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: white;
+}
+
+/* Statistiques en gras */
+.achievement-stats {
+    margin-bottom: 20px;
+}
+
+.stat {
+    display: block; /* Prend toute la largeur */
+    font-size: 32px; /* Très grand */
+    font-weight: bold;
+    color: gold;
+    margin-bottom: 5px;
+}
+
+.stat-label {
+    color: #b0b0b0;
+    font-size: 14px;
+}
+
+/* Texte descriptif */
+.achievement-card p {
+    color: #d0d0d0;
+    margin-bottom: 20px;
+    line-height: 1.6;
+}
+
+/* Liste à puces */
+.achievement-list {
+    list-style: none; /* Enlève les puces par défaut */
+    padding: 0;
+}
+
+.achievement-list li {
+    color: #e0e0e0;
+    margin-bottom: 10px;
+    padding-left: 25px; /* Espace pour l'icône */
+    position: relative; /* Pour positionner l'icône */
+}
+
+/* Icône check devant chaque élément */
+.achievement-list li i {
+    color: gold;
+    position: absolute; /* Position exacte */
+    left: 0; /* Tout à gauche */
+    top: 5px;
+}
+
+/* ===================================
+   TIMELINE (FRISE CHRONOLOGIQUE)
+   =================================== */
+
+.timeline {
+    background: #1a1a2e;
+    border-radius: 15px;
+    padding: 40px;
+    margin-top: 50px;
+}
+
+.timeline-title {
+    text-align: center;
+    font-size: 28px;
+    color: white;
+    margin-bottom: 40px;
+}
+
+/* Conteneur de la timeline */
+.timeline-container {
+    position: relative; /* Pour la ligne verticale */
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Ligne verticale au centre */
+.timeline-container::before {
+    content: '';
+    position: absolute;
+    left: 50%; /* Au centre */
+    top: 0;
+    bottom: 0;
+    width: 3px; /* Très fin */
+    background: gold;
+    transform: translateX(-50%); /* Centre parfaitement */
+}
+
+/* Chaque élément de la timeline */
+.timeline-item {
+    margin-bottom: 40px;
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+/* Date dans un cercle */
+.timeline-date {
+    background: gold;
+    color: black;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%; /* Cercle parfait */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 18px;
+    z-index: 1; /* Au-dessus de la ligne */
+    margin-right: 30px;
+}
+
+/* Contenu à droite de la date */
+.timeline-content {
+    background: #162447;
+    padding: 20px;
+    border-radius: 10px;
+    flex: 1; /* Prend l'espace restant */
+}
+
+.timeline-content h4 {
+    color: gold;
+    margin-bottom: 10px;
+    font-size: 20px;
+}
+
+.timeline-content p {
+    color: #b0b0b0;
+}
+
+/* ===================================
+   PIED DE PAGE
+   =================================== */
+
+.footer {
+    text-align: center;
+    padding: 40px 20px;
+    margin-top: 80px;
+    border-top: 1px solid #333;
+    color: #888;
+}
+
+/* Liens du footer */
+.footer-links {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin: 20px 0;
+}
+
+.footer-links a {
+    color: gold;
+    text-decoration: none;
+    font-size: 18px;
+    transition: color 0.3s;
+}
+
+.footer-links a:hover {
+    color: #ffd700; /* Or plus clair */
+}
+
+/* Copyright */
+.copyright {
+    margin-top: 20px;
+    font-size: 14px;
+    color: #666;
+}
+
+/* ===================================
+   RESPONSIVE DESIGN
+   =================================== */
+
+/* Pour les tablettes (écran < 1024px) */
+@media (max-width: 1024px) {
+    .highlights-grid {
+        grid-template-columns: repeat(2, 1fr); /* 2 colonnes */
+    }
+    
+    .achievements-container {
+        grid-template-columns: 1fr; /* 1 colonne */
+    }
+}
+
+/* Pour les téléphones (écran < 768px) */
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 36px; /* Plus petit */
+    }
+    
+    .hero p {
+        font-size: 18px;
+    }
+    
+    .highlights-grid {
+        grid-template-columns: 1fr; /* 1 colonne */
+    }
+    
+    .section-title {
+        font-size: 28px;
+    }
+    
+    .timeline-container::before {
+        left: 30px; /* Déplace la ligne à gauche */
+    }
+    
+    .timeline-item {
+        flex-direction: column; /* Empile date et contenu */
+        align-items: flex-start;
+    }
+    
+    .timeline-date {
+        margin-bottom: 15px;
+        margin-right: 0;
+    }
+    
+    .footer-links {
+        flex-direction: column; /* Liens empilés */
+        gap: 15px;
+    }
+}
+
+/* Très petits téléphones (écran < 480px) */
+@media (max-width: 480px) {
+    .hero h1 {
+        font-size: 28px;
+    }
+    
+    .cta-button {
+        padding: 12px 30px;
+        font-size: 16px;
+    }
+    
+    .card-icon {
+        font-size: 40px;
+    }
+    
+    .achievement-card {
+        padding: 20px;
+    }
+}

@@ -1,0 +1,84 @@
+h1{
+color:midnight blue
+}
+
+#box{
+display:flex;
+flex-direction:column;
+gap: 20px; 
+}
+
+#bulleparole{
+	width: 600px;
+    height: auto;
+	position: absolute;
+    top: 150px;
+    right: 100px;      
+	z-index: 1;
+}	
+
+#Catpop{
+	width: 450px;
+    height: auto;
+	position: absolute;
+    top: 400px;
+    right: 10px;
+	transform: scaleX(-1);
+	z-index: 3;
+}	
+
+#box1{
+background-color: black;
+padding: 15px ;
+font-size: 25px;
+border-radius:8px;
+ position: absolute;
+    top: 500px;
+    right: 500px;
+	cursor:pointer;
+	border-left: 80px solid black;
+    border-right: 190px solid black;
+	z-index: 1;
+}
+
+#box2{
+background-color:black;
+padding: 15px ;
+	font-size:25px;
+	border-radius:8px;
+	 position: absolute;
+    top: 600px;
+    right: 450px;
+	cursor:pointer;
+	border-left: 80px solid black;
+    border-right: 190px solid black;
+	z-index: 1;
+}
+
+#box3{
+background-color: black;
+padding: 15px ;
+	font-size:25px;
+	border-radius:8px;
+	 position: absolute;
+    top: 700px;
+    right: 510px;
+	cursor:pointer; 
+	border-left: 80px solid black;
+    border-right: 190px solid black;
+	z-index: 1;
+}
+
+#box4{
+background-color: black;
+padding: 15px ;
+	font-size:25px;
+	border-radius:8px;
+	 position: absolute;
+    top: 800px;
+    right: 600px;
+	cursor:pointer;
+	border-left: 80px solid black;
+    border-right: 200px solid black;
+	z-index: 1;
+}

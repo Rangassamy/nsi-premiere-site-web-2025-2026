@@ -1,0 +1,40 @@
+body{
+font-family:Arial;
+background-color:black;
+color:white;
+text-align: center;
+}
+
+.photo{
+width:250px;
+display: block;
+margin-bottom:40px
+}
+
+.container img{
+    width: 250px;
+}
+
+.text{
+      color: gris;
+      font-size: 16px;
+}
+
+.bloc{
+display:flex;
+align-items: flex-start;
+gap:20px;}
+
+
+
+.btn{
+display: block;
+  transform: scale(1);
+  transition: transform 0.3s ease;
+  transform-origin:  center;}
+
+
+.btn:hover{
+    transform: scale(1.1); /* crece un poco */
+}
+

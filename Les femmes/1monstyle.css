@@ -1,0 +1,68 @@
+
+
+html, body{
+   margin: 0;
+   padding: 0;
+   width: 100%;
+   height: 100%;
+}
+
+body {
+
+  display: grid;
+  place-items: center;
+  background-color: SteelBlue;
+  text-align: center;
+}
+
+.box2{
+    gap: 50px;
+    width: 800px;
+    height: 650px;
+    background-color: lightgrey;
+    text-align: center;
+    border-radius: 20px;
+    
+}
+
+h1{
+background-color:grey;
+text-align:center;
+
+}
+
+.presentation {
+   text-align: center;
+   font-size: 2px;
+}
+
+.Test {
+  border-color: grey;
+  border-radius: 20px;
+  width :600px;
+  height: 400px;
+  background-color: white;
+
+  padding: 20px;
+  border-radius: 20px;
+ 
+
+}
+
+.photo {
+  border-radius: 20px;
+}
+
+.btn:hover{
+    background: #FFFF;
+    transform: scale(1.1); /* crece un poco */
+}
+
+
+.btn {
+    transition: transform 0.3s ease;
+  position: fixed;
+  bottom: 20px;   /* distance du bas */
+  right: 20px;    /* distance de la droite */
+  z-index: 1000;  /* pour être au-dessus du contenu */
+}

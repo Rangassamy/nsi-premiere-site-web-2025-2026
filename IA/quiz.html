@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Quiz sur l'IA</title>
+    <link rel="stylesheet" href="style quiz.css">
+
+    <script>
+        function corrigerQuiz() {
+            let score = 0;
+            let correction = "";
+
+            // Question 1
+            if (document.getElementById("q1b").checked) {
+                score++;
+                correction += "<p>✔ Q1 : Bonne réponse</p>";
+            } else {
+                correction += "<p>✘ Q1 : Bonne réponse → 1956</p>";
+            }
+
+            // Question 2
+            if (document.getElementById("q2a").checked) {
+                score++;
+                correction += "<p>✔ Q2 : Bonne réponse</p>";
+            } else {
+                correction += "<p>✘ Q2 : Bonne réponse → La médecine</p>";
+            }
+
+            // Question 3
+            if (document.getElementById("q3c").checked) {
+                score++;
+                correction += "<p>✔ Q3 : Bonne réponse</p>";
+            } else {
+                correction += "<p>✘ Q3 : Bonne réponse → Problèmes éthiques et emploi</p>";
+            }
+
+            document.getElementById("resultat").innerHTML =
+                "<h3>Score : " + score + " / 3</h3>" + correction;
+        }
+
+        function corrigerVF() {
+            let score = 0;
+            let correction = "";
+
+            if (document.getElementById("vf1f").checked) {
+                score++;
+                correction += "<p>✔ V/F 1 : Faux</p>";
+            } else {
+                correction += "<p>✘ V/F 1 : Faux</p>";
+            }
+
+            if (document.getElementById("vf2v").checked) {
+                score++;
+                correction += "<p>✔ V/F 2 : Vrai</p>";
+            } else {
+                correction += "<p>✘ V/F 2 : Vrai</p>";
+            }
+
+            if (document.getElementById("vf3v").checked) {
+                score++;
+                correction += "<p>✔ V/F 3 : Vrai</p>";
+            } else {
+                correction += "<p>✘ V/F 3 : Vrai</p>";
+            }
+
+            document.getElementById("resultatVF").innerHTML =
+                "<h3>Score : " + score + " / 3</h3>" + correction;
+        }
+    </script>
+</head>
+
+<body>
+<header>
+    <h1>Quiz sur l'intelligence artificielle</h1>
+    <nav>
+        <a href="accueil.html">Accueil</a>
+        <a href="passe.html">Le passé</a>
+        <a href="present.html">Le présent</a>
+        <a href="futur.html">Le futur</a>
+        <a href="quiz.html">Quiz</a>
+    </nav>
+</header>
+
+<main>
+
+    <!-- QCM -->
+    <h2>Quiz QCM</h2>
+
+    <h3>1. En quelle année apparaît le terme « intelligence artificielle » ?</h3>
+    <input type="radio" name="q1" id="q1a"> 1940<br>
+    <input type="radio" name="q1" id="q1b"> 1956<br>
+    <input type="radio" name="q1" id="q1c"> 2000<br>
+
+    <h3>2. Où l’IA est-elle utilisée aujourd’hui ?</h3>
+    <input type="radio" name="q2" id="q2a"> En médecine<br>
+    <input type="radio" name="q2" id="q2b"> Nulle part<br>
+    <input type="radio" name="q2" id="q2c"> Seulement à l’école<br>
+
+    <h3>3. Quel est un enjeu du futur de l’IA ?</h3>
+    <input type="radio" name="q3" id="q3a"> Aucun<br>
+    <input type="radio" name="q3" id="q3b"> Elle va disparaître<br>
+    <input type="radio" name="q3" id="q3c"> L’éthique et l’emploi<br><br>
+
+    <button onclick="corrigerQuiz()">Corriger le QCM</button>
+
+    <div id="resultat"></div>
+
+    <hr>
+
+    <!-- VRAI / FAUX -->
+    <h2>Quiz Vrai / Faux</h2>
+
+    <h3>1. L’IA existe depuis le Moyen Âge</h3>
+    <input type="radio" name="vf1" id="vf1v"> Vrai<br>
+    <input type="radio" name="vf1" id="vf1f"> Faux<br>
+
+    <h3>2. Le machine learning permet aux machines d’apprendre</h3>
+    <input type="radio" name="vf2" id="vf2v"> Vrai<br>
+    <input type="radio" name="vf2" id="vf2f"> Faux<br>
+
+    <h3>3. L’IA peut poser des questions éthiques</h3>
+    <input type="radio" name="vf3" id="vf3v"> Vrai<br>
+    <input type="radio" name="vf3" id="vf3f"> Faux<br><br>
+
+    <button onclick="corrigerVF()">Corriger le Vrai / Faux</button>
+
+    <div id="resultatVF"></div>
+
+</main>
+
+<footer>
+    <p>Projet lycée – Histoire de l'IA</p>
+</footer>
+</body>
+</html>

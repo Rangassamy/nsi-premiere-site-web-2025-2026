@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<title>Quiz Minecraft & Notch</title>
+<link rel="stylesheet" href="Link/ButtonAsset.css">
+
+<style>
+.question {
+    margin-bottom: 30px;
+}
+.answers {
+    text-align: left;
+    max-width: 700px;
+    margin: 15px auto;
+}
+.answers label {
+    display: block;
+    margin: 8px 0;
+    cursor: pointer;
+}
+#score {
+    font-size: 26px;
+    color: white;
+    text-align: center;
+    margin-top: 40px;
+}
+</style>
+</head>
+
+<body>
+
+<div class="frame">
+<div class="content">
+
+<h2> Quiz – Histoire de Notch & Minecraft</h2>
+<div class="separator"></div>
+
+<form id="quiz">
+
+<!-- QUESTIONS -->
+<script>
+const questions = [
+{q:"Quel est le vrai nom de Notch ?", a:["Markus Persson","Markus Peterson","Jens Bergensten"], c:0},
+{q:"En quelle année Minecraft a-t-il été créé ?", a:["2007","2009","2011"], c:1},
+{q:"Quel langage Notch utilisait enfant ?", a:["Python","BASIC","Java"], c:1},
+{q:"Quel jeu a inspiré Minecraft ?", a:["Terraria","Infiniminer","Roblox"], c:1},
+{q:"Quel studio Notch a fondé ?", a:["Valve","Mojang","Epic Games"], c:1},
+{q:"Minecraft est un jeu de type ?", a:["FPS","Sandbox","RPG"], c:1},
+{q:"Quelle société a racheté Mojang ?", a:["Sony","Microsoft","Google"], c:1},
+{q:"Prix de vente de Mojang ?", a:["500 millions","1 milliard","2,5 milliards"], c:2},
+{q:"Quel mode est apparu en premier ?", a:["Créatif","Survie","Hardcore"], c:1},
+{q:"Quel matériau est central dans Minecraft ?", a:["Sable","Bois","Blocs"], c:2},
+
+{q:"Quel mob explose ?", a:["Zombie","Creeper","Skeleton"], c:1},
+{q:"Qui est Jeb ?", a:["Un joueur","Un développeur","Un streamer"], c:1},
+{q:"Minecraft Alpha est sorti ?", a:["2008","2009","2010"], c:1},
+{q:"Quel est le boss final ?", a:["Wither","Dragon de l’End","Golem"], c:1},
+{q:"Quel biome n’existe pas ?", a:["Désert","Savane","Volcan"], c:2},
+{q:"Quel outil casse la pierre ?", a:["Pelle","Hache","Pioche"], c:2},
+{q:"Quel minerai est le plus rare ?", a:["Fer","Diamant","Charbon"], c:1},
+{q:"Quelle version a ajouté le Nether ?", a:["Alpha","Beta","Release"], c:1},
+{q:"Quelle dimension existe ?", a:["Lune","End","Ciel"], c:1},
+{q:"Quel événement est officiel ?", a:["Minecon","CraftFest","BlockCon"], c:0},
+
+{q:"Quel YouTubeur a popularisé MC ?", a:["Squeezie","PewDiePie","MrBeast"], c:1},
+{q:"Quel animal est apprivoisable ?", a:["Vache","Loup","Cochon"], c:1},
+{q:"Qui a repris MC après Notch ?", a:["Jeb","Valve","EA"], c:0},
+{q:"Minecraft est aussi utilisé pour ?", a:["Éducation","Banque","Médecine"], c:0},
+
+];
+
+let html="";
+questions.forEach((q,i)=>{
+html+=`<div class="question">
+<p><strong>${i+1}. ${q.q}</strong></p>
+<div class="answers">`;
+q.a.forEach((ans,j)=>{
+html+=`
+<label>
+<input type="radio" name="q${i}" value="${j}">
+${ans}
+</label>`;
+});
+html+=`</div></div>`;
+});
+document.write(html);
+</script>
+
+<div class="button-block">
+<div class="BT1" onclick="checkQuiz()">Valider</div>
+</div>
+
+<div class="button-block">
+    <a href = "MainScript.html" class="BT1">
+        Retour
+    </a>
+</div>
+
+</form>
+
+<div id="score"></div>
+
+</div>
+</div>
+
+<script>
+function checkQuiz(){
+let score=0;
+questions.forEach((q,i)=>{
+const sel=document.querySelector(`input[name="q${i}"]:checked`);
+if(sel && parseInt(sel.value)===q.c) score++;
+});
+document.getElementById("score").innerHTML =
+`✅ Ton score : <strong>${score} / 24</strong>`;
+}
+</script>
+
+</body>
+</html>

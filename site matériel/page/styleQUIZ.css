@@ -1,0 +1,51 @@
+body {
+    
+    background-color: black;
+    color: black;
+    padding: 20px;
+}
+h1{
+    color: white;
+    text-align: center;
+}
+p {
+    background: gainsboro;
+    padding: 15px;
+    
+}
+
+
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+}
+.retour {
+    color: white;
+    background-color: black;
+    font-size: 25px;
+     border: 2px solid white;
+     text-decoration: none;
+}
+.retour:hover {
+    background: white;
+    color: black;
+}
+
+#valider{
+    color: white;
+    background-color: black;
+}
+#valider:hover{
+    color: black;
+    background-color: white;
+}
+.bon {
+    background-color: green;
+    color: white; 
+}
+
+.mauvais {
+    background-color: red;
+    color: white; 
+}

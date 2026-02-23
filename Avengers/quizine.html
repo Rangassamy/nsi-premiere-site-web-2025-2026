@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Marvel</title>
+    <!-- lien pr les icones  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- lien pr le style  -->
+    <link rel="stylesheet" href="styleQ.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Bouton pr retourner a l'accueil -->
+        <a href="mcuhub.html" class="back-button">
+            <i class="fas fa-arrow-left"></i> Retour à l'accueil
+        </a>
+        
+        <!-- Titre du quiz -->
+        <h1 class="section-title">Quiz Marvel</h1>
+        <p class="section-subtitle">Testez vos connaissances sur le MCU</p>
+        
+        <!-- Question 1 -->
+        <div class="quiz-question" id="question1">
+            <h3>Question 1 sur 5</h3>
+            <p>Quel est le premier film du MCU sorti en 2008 ?</p>
+            
+            <div class="quiz-options">
+                <button class="quiz-option" onclick="reponseFausse(this)">Sanio The steel man</button>
+                <button class="quiz-option" onclick="reponseCorrecte(this, 1)">Iron Man</button>
+                <button class="quiz-option" onclick="reponseFausse(this)">Anais psk alan a dit</button>
+                <button class="quiz-option" onclick="reponseFausse(this)">Captain America</button>
+            </div>
+            
+            <div id="feedback1" class="feedback-box">
+                <i class="fas fa-check"></i> <strong>Bonne réponse !</strong> Iron Man a lancé le MCU en 2008.
+            </div>
+        </div>
+        
+        <!-- Question 2 -->
+        <div class="quiz-question" id="question2">
+            <h3>Question 2 sur 5</h3>
+            <p>Qui a créé l'armure Iron Man ?</p>
+            
+            <div class="quiz-options">
+                <button class="quiz-option" onclick="reponseCorrecte(this, 2)">Tony Stark</button>
+                <button class="quiz-option" onclick="reponseFausse(this)">Océanne vs zindien</button>
+                <button class="quiz-option" onclick="reponseFausse(this)">Barreto Valeria(jax is cooked)</button>
+                <button class="quiz-option" onclick="reponseFausse(this)">Reed Richards</button>
+            </div>
+            
+            <div id="feedback2" class="feedback-box">
+                <i class="fas fa-check"></i> <strong>Exact !</strong> Tony Stark est Iron Man.
+            </div>
+        </div>
+        
+        <!-- Question 3 -->
+        <div class="quiz-question" id="question3">
+            <h3>Question 3 sur 5</h3>
+            <p>Quelle pierre d'Infinité est cachée dans le Tesseract ?</p>
+            
+            <div class="quiz-options">
+                <button class="quiz-option" onclick="reponseFausse(this)">la pierre 777 de la fortune de hakari</button>
+                <button class="quiz-option" onclick="reponseFausse(this)">Pierre du Pouvoir</button>
+                <button class="quiz-option" onclick="reponseFausse(this)">Pierre de alicia mais ça fait rien</button>
+                <button class="quiz-option" onclick="reponseCorrecte(this, 3)">Pierre de l'Espace</button>
+            </div>
+            
+            <div id="feedback3" class="feedback-box">
+                <i class="fas fa-check"></i> <strong>Correct !</strong> Le Tesseract contient la Pierre de l'Espace.
+            </div>
+        </div>
+        
+        <!-- Question 4 -->
+        <div class="quiz-question" id="question4">
+            <h3>Question 4 sur 5</h3>
+            <p>Quel est le vrai nom de Black Panther ?</p>
+            
+            <div class="quiz-options">
+                <button class="quiz-option" onclick="reponseCorrecte(this, 4)">T'Challa</button>
+                <button class="quiz-option" onclick="reponseFausse(this)">Jiordan ramene du diamant dans la survie stp</button>
+                <button class="quiz-option" onclick="reponseFausse(this)">Killmonger</button>
+                <button class="quiz-option" onclick="reponseFausse(this)">Nuttela(oui yannela)</button>
+            </div>
+            
+            <div id="feedback4" class="feedback-box">
+                <i class="fas fa-check"></i> <strong>Bien joué !</strong> T'Challa est le Black Panther.
+            </div>
+        </div>
+        
+        <!-- Question 5 -->
+        <div class="quiz-question" id="question5">
+            <h3>Question 5 sur 5</h3>
+            <p>Dans quel film voit-on pour la première fois l'équipe complète des Avengers ?</p>
+            
+            <div class="quiz-options">
+                <button class="quiz-option" onclick="reponseCorrecte(this, 5)">The Avengers (2012)</button>
+                <button class="quiz-option" onclick="reponseFausse(this)">Avengers: Age of Goon</button>
+                <button class="quiz-option" onclick="reponseFausse(this)">Avengers Doomsday feat sonic,niska,godzilla,superman,takeshi,denji,apoutchoueve,and the other film that released before doomsday</button>
+                <button class="quiz-option" onclick="reponseFausse(this)">Avengers: Ishenity War</button>
+            </div>
+            
+            <div id="feedback5" class="feedback-box">
+                <i class="fas fa-check"></i> <strong>Exact !</strong> The Avengers (2012) est le premier film avec toute l'équipe.
+            </div>
+        </div>
+
+        
+        <!-- Résultat final -->
+        <div class="quiz-result" id="quizResult">
+            <h2><i class="fas fa-trophy"></i> Quiz Terminé !</h2>
+            <p>Bravo ! Vous avez répondu à toutes les questions.</p>
+            <div class="result-buttons">
+                <a href="mcuhub.html" class="back-button">
+                    <i class="fas fa-home"></i> Retour à l'accueil
+                </a>
+                <button class="back-button restart-btn" onclick="recommencerQuiz()">
+                    <i class="fas fa-redo"></i> Recommencer
+                </button>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Script du quiz -->
+    <script>
+        // Quand la page charge, cache tout sauf la question 1
+        document.addEventListener('DOMContentLoaded', function() {
+            // Cache les questions 2 à 5
+            for (let i = 2; i <= 5; i++) {
+                document.getElementById('question' + i).style.display = 'none';
+            }
+            // Cache les feedbacks
+            for (let i = 1; i <= 5; i++) {
+                document.getElementById('feedback' + i).style.display = 'none';
+            }
+            // Cache le résultat
+            document.getElementById('quizResult').style.display = 'none';
+        });
+        
+        // Fonction pr bonne réponse
+        function reponseCorrecte(bouton, questionNum) {
+            // Met le bouton en vert
+            bouton.style.background = '#2e7d32';
+            bouton.style.borderColor = '#4caf50';
+            
+            // Affiche le feedback
+            document.getElementById('feedback' + questionNum).style.display = 'block';
+            
+            // Message
+            alert('🎉 Bien joué ! Bonne réponse !');
+            
+            // Passe à la question suivante après 1.5 secondes
+            setTimeout(function() {
+                passerQuestionSuivante(questionNum);
+            }, 1500);
+        }
+        
+        // Fonction pr mauvaise réponse
+        function reponseFausse(bouton) {
+            // Met le bouton en rouge
+            bouton.style.background = '#c62828';
+            bouton.style.borderColor = '#ef5350';
+            
+            // Message
+            alert('❌ Pas tout à fait... Essaie encore !');
+        }
+        
+        // Fonction pr passer à la question suivante
+        function passerQuestionSuivante(questionActuelle) {
+            // Cache la question actuelle
+            document.getElementById('question' + questionActuelle).style.display = 'none';
+            
+            // Si c'était la dernière question (5), montre le résultat
+            if (questionActuelle === 5) {
+                document.getElementById('quizResult').style.display = 'block';
+            } else {
+                // Sinon, montre la question suivante
+                document.getElementById('question' + (questionActuelle + 1)).style.display = 'block';
+            }
+        }
+        
+        // Fonction pr recommencer le quiz
+        function recommencerQuiz() {
+            // Cache le résultat
+            document.getElementById('quizResult').style.display = 'none';
+            
+            // Cache toutes les questions sauf la première
+            for (let i = 1; i <= 5; i++) {
+                document.getElementById('question' + i).style.display = 'none';
+                document.getElementById('feedback' + i).style.display = 'none';
+                
+                // Réinitialise les boutons
+                const boutons = document.querySelectorAll('#question' + i + ' .quiz-option');
+                boutons.forEach(bouton => {
+                    bouton.style.background = '';
+                    bouton.style.borderColor = '';
+                });
+            }
+            
+            // Montre la première question
+            document.getElementById('question1').style.display = 'block';
+        }
+    </script>
+</body>
+</html>

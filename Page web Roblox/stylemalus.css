@@ -1,0 +1,113 @@
+body{
+    background-image: url("fond flippant.gif");
+    background-size: 1900px 1000px;
+    background-attachment: fixed;
+    background-repeat: repeat;
+	background-size: cover;
+}
+
+h1{
+    font-size: 55px;
+    position: absolute;
+    top: 50px;
+    left: 200px;
+    color: firebrick; 
+	font-family:calibri;
+	text-align: center;
+    z-index: 2;
+}
+
+h4{
+    font-size: 55px;
+    position: absolute;
+    top: 19px;
+    left: 200px;
+    color: black; 
+	font-family:calibri;
+	text-align: center;
+	z-index: 1;
+}
+
+h2{
+    background-color: black;
+    padding: 20px;
+    font-size: 30px;
+    border-radius: 8px;
+    position: absolute;
+   top: 720px;
+    left: 0px;
+    border-left: 0px solid ;
+    border-right: 90px solid black;
+    color:firebrick; 
+	font-family:calibri;
+	z-index: 2;
+}
+
+h3{
+    background-color: firebrick;
+    padding: 20px;
+    font-size: 30px;
+    border-radius: 8px;
+    position: absolute;
+   top: 780px;
+    left: 0px;
+    border-left: 0px solid ;
+    border-right: 90px solid firebrick;
+	color:black; 
+	font-family:calibri;
+	z-index: 1;
+}
+
+div{
+    color: red;
+    text-align: center;
+	font-family:calibri;
+}
+
+img{
+	cursor:pointer;
+	width: 85px;
+    height: 85px;
+	position: absolute;
+    top: 5px;
+    left: 8px;
+	z-index:5;
+}
+
+#box1{
+z-index: 0;
+width: 100px;
+height: 100px;
+background-color: firebrick;
+border-radius: 50%;
+position: absolute;
+top: 30px;
+left: 30px;
+}
+
+#oeilrouge{
+	width: 140px;
+    height: auto;
+	position: absolute;
+    top: 780px;
+    left: 565px;
+	z-index: 4;
+}	
+
+#redface{
+	width: 500px;
+    height: auto;
+	position: absolute;
+    top: 0px;
+    left: 650px;
+	z-index: 1;
+}	
+
+#Killerqueen{
+	width: 310px;
+    height: auto;
+	position: absolute;
+    top: 0px;
+    left: 1530px;
+	z-index: 3;
+}
